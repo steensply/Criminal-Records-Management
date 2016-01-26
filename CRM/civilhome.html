@@ -1,0 +1,49 @@
+<html>
+<script type="text/javascript" language="javascript">
+function DisableBackButton() 
+{
+window.history.forward()
+}
+DisableBackButton();
+window.onload = DisableBackButton;
+window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
+window.onunload = function() { void (0) }
+</script>
+<head>
+<title>Home</title>
+<style>
+h2:hover
+{
+color:#0033FF;
+transition:0.5s;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+<br>
+<h2><center>Civilian - Home</center></h2>
+<table>
+<tr>
+<td>
+<div class="menu">
+<div class="innermenu">
+<a href="civilcheckinfo.html"><img src="checkinfo.png"/></a><br><br>
+<a href="civilcomplain.html"><img src="complain.png"/></a><br><br>
+<a href="main.html"><img src="logout.png"/></a><br><br>
+<!--<a href="civiledit.html"><img src="edit.png"/></a>-->
+</div></div></td>
+<td><div class="content"><div class="innercontent">
+Welcome civilian<br>
+We the Police Department promise to give you protection and will be at your service 24/7. 
+<?php
+include 'http:/localhost/CR/WebContent/civilhome.php';
+?>
+</div></div></td>
+<td>
+<img src="emblem.png" width="200" height="320" />
+</td>
+</tr>
+</table>
+</body>
+</html>

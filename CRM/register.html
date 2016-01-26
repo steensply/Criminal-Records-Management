@@ -1,0 +1,163 @@
+<html>
+<script type="text/javascript" language="javascript">
+function docheck()
+{
+	var username=document.getElementById("username");
+	var password=document.getElementById("password");
+	var name=document.getElementById("name");
+	var pan=document.getElementById("panid");
+	var phno=document.getElementById("number");
+	var dob=document.getElementById("dob");
+	var address=document.getElementById("address");
+	
+	if(username.value=="")
+		{
+			alert("Enter username");
+			return false;
+		}
+	if(password.value=="")
+		{
+			alert("Enter password");
+			return false;
+		}
+	if(name.value=="")
+		{
+			alert("Enter name");
+			return false;
+		}
+	if(pan.value=="")
+		{
+			alert("Enter PAN ID");
+			return false;
+		}
+	if(phno.value=="")
+		{
+			alert("Enter Phone number");
+			return false;
+		}
+	if(dob.value=="")
+		{
+			alert("Enter the date of birth");
+			return false;
+		}
+	if(address.value=="")
+		{
+			alert("Enter the address");
+			return false;
+		}
+	}
+function DisableBackButton() 
+{
+window.history.forward()
+}
+DisableBackButton();
+window.onload = DisableBackButton;
+window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
+window.onunload = function() { void (0) }
+</script>
+<head>
+<style>
+h2
+{
+color:white;
+font-family:verdana;
+}
+button
+{
+background-color:black;
+}
+td
+{
+border: 10px solid black;
+text-align:right;
+}
+table
+{
+color:white;
+font-family:verdana;
+font-size:15px;
+font-weight:bold;
+}
+body
+{
+background-color:black;
+}
+div.reg
+{
+padding:50px;
+border-radius:30px;
+background-color:black;
+color:white;
+width:700px;
+height:650px;
+margin-left:auto;
+margin-right:auto;
+box-radius:25px;
+}
+div.form
+{
+font-face:verdana;
+font-size:15px;
+border-radius:30px;
+background-color:grey;
+color:white;
+width:1000px;
+height:800px;
+margin-left:auto;
+margin-right:auto;
+box-radius:25px;
+box-shadow:5px 5px 5px white;
+}
+</style>
+<title>Civilian Registration Page</title>
+</head>
+<body>
+<div class="form">
+<div class="reg">
+<center>
+<h2>Civilian Registration Form</h2>
+<!-- <form action="http:/localhost/signup.php" method=post>-->
+<form id="reg" method=post action="http://localhost/CR/WebContent/signup.php" onsubmit="docheck()">
+<table>
+<tr>
+<td>Username:</td><td><input type="text" name="username" id="username"/></td>
+</tr>
+<tr>
+<td>
+Password:</td><td><input type="password" name="password" id="password"/>
+</td>
+</tr>
+<tr>
+<td>Name:</td><td><input type="text" name="name" id="name"/></td>
+</tr>
+<tr>
+<td>PAN:</td><td><input type="text" name="panid" id="panid"></td>
+</tr>
+<tr>
+<td>Gender:</td><td><input type="radio" name="gender" id="gender"/>Male</input><input type="radio" name="gender">Female</input></td>
+</tr>
+<tr>
+<td>
+Phone number:
+<td>
+<input type="text" name="number" id="number"/>
+</td>
+</td>
+</tr>
+<tr>
+<td>Date of Birth:</td><td><input type="text" name="dob" id="name" value="DD/MM/YYYY"></input></td>
+</tr>
+<tr>
+<td>Address:</td><td><textarea rows="5" cols="30" name="address" id="address"></textarea></td>
+</tr>
+<tr>
+<td><button type="submit"><img src="submit.png"></button></td>
+<td><button type="reset"><img src="reset.png"></button></td>
+</tr>
+</table>
+</form>
+</center>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+--
+-- MySQL 5.6.12
+-- Fri, 27 Dec 2013 05:50:21 +0000
+--
+
+CREATE DATABASE IF NOT EXISTS `crm` DEFAULT CHARSET latin1;
+
+USE `crm`;
+
+CREATE TABLE `civilian` (
+   `name` varchar(50),
+   `pan` int(10),
+   `phno` int(10),
+   `address` varchar(200),
+   `username` varchar(20),
+   `password` varchar(20)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `complaints` (
+   `complaint` varchar(50),
+   `name` varchar(50),
+   `civilian` varchar(50),
+   `area` varchar(50)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `criminal` (
+   `ID` int(10),
+   `name` varchar(50),
+   `crime` varchar(30),
+   `status` varchar(30),
+   `knownassoc` varchar(50),
+   `arrestedby` varchar(50),
+   `dob` date,
+   `sentencedtill` date
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `police` (
+   `ID` int(10),
+   `name` varchar(50),
+   `dob` date,
+   `station` varchar(30),
+   `position` varchar(30),
+   `phno` int(10),
+   `address` varchar(200),
+   `username` varchar(30),
+   `password` varchar(30)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

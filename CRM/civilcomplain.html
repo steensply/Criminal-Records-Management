@@ -1,0 +1,69 @@
+<html>
+<script type="text/javascript" language="javascript">
+function DisableBackButton() 
+{
+window.history.forward()
+}
+DisableBackButton();
+window.onload = DisableBackButton;
+window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
+window.onunload = function() { void (0) }
+</script>
+<head>
+<title>Home</title>
+<style>
+h2:hover
+{
+color:#0033FF;
+transition:0.5s;
+}
+button
+{
+background-color:black;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+<br>
+<h2><center>Civilian - Complain</center></h2>
+<table>
+<tr>
+<td>
+<div class="menu">
+<div class="innermenu">
+<a href="civilcheckinfo.html"><img src="checkinfo.png"/></a><br><br>
+<a href="civilcomplain.html"><img src="complain.png"/></a><br><br>
+<a href="main.html"><img src="logout.png"/></a><br><br>
+<!--<a href="civiledit.html"><img src="edit.png"/></a>-->
+</div></div></td>
+<td><div class="content"><div class="innercontent">
+<form action="http://localhost/CR/WebContent/complain.php" method="post">
+<table>
+<tr>
+<td> Your name: </td><td><input type="text" name="civilian"/></td>
+</tr>
+<tr>
+<td> Criminal name: </td> <td><input type="text" name="name"/></td>
+</tr>
+<tr>
+<td>Crime area:</td><td><input type="text" name="area"/></td>
+</tr>
+<tr>
+<td>
+Crime: </td><td><input type="text" name="crime"/>
+</td>
+</tr>
+<tr>
+<td><button type="submit"><img src="submit.png"></button></td><td><button type="reset"><img src="cancel.png"></button></td>
+</tr>
+</table>
+</form>
+</div></div></td>
+<td>
+<img src="emblem.png" width="200" height="320" />
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<html>
+<head>
+<script type="text/javascript">
+function redirect()
+{
+	windows.location="http:/localhost/CR/CRM/policelogin.html";
+	}
+function docheck()
+{
+	var u=document.getElementById("user");
+	var v=document.getElementById("pass");
+	
+	if(u.value=="")
+		{
+			
+			alert("Enter the username");
+			redirect();
+			return false;
+		}
+	if(v.value=="")
+		{
+			
+			alert("Enter the password");
+			//stop();
+			redirect();
+			return false;
+		}
+	}
+	</script>
+<title>Civilian Login Page</title>
+</head>
+<body>
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Login page</title>
+<style>
+hr
+{
+color:white;
+}
+option
+{
+font-family:"Verdana";
+font-size:15px;
+}
+button
+{
+background:black;
+}
+body
+{
+background-color:black;
+}
+h2
+{
+font-family:comic sans ms;
+color:#E0E0E0;
+font-size:25px;
+}
+h2:hover
+{
+color:#0033FF;
+transition:0.5s;
+}
+div.main
+{
+margin:25px;
+margin-left:auto;
+margin-right:auto;
+border:5px solid #dddddd;
+border-radius:30px;
+width:1330px;
+height:500px;
+background-color:grey;
+}
+div.main:hover
+{
+transition:1s;
+border-color:#0033FF;
+}
+div.desc
+{
+background-color:black;
+width:300px;
+font-family:"Verdana";
+margin-left:100px;
+font-size:15px;
+border-radius:20px;
+}
+div.login
+{
+box-shadow: 10px 10px 5px #AEAEAE;
+font-family:"Verdana";
+font-weight:bold;
+color:white;
+height:440px;
+width:900px;
+margin-top:30px;
+margin-bottom:30px;
+margin-left:auto;
+margin-right:auto;
+border-radius:25px;
+background-color:black;
+}
+</style>
+</head>
+<body>
+<center><h2>Criminal Record Management System</h2></center>
+</br>
+<div class="main">
+<div class="login">
+<br><br><br>
+<center>
+<br><br>
+<form id="login" action=" http://localhost/CR/webcontent/clogin.php" method=post onsubmit="docheck()">
+Username: <input type="text" id="user" name="user"/><br><br><br>
+Password: <input type="password" id="pass" name="pass"/><br><br><br>
+<button type="submit"><img src="signin.png"/></button><br><br>
+</form>
+</center>
+</div>
+</div>
+</body>
+</html>
+</body>
+</html>

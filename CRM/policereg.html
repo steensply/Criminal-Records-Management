@@ -1,0 +1,109 @@
+<html>
+<head>
+<style>
+h2
+{
+font-family:verdana;
+font-color:white;
+}
+button
+{
+background-color:black;
+}
+td
+{
+border: 10px solid black;
+text-align:right;
+}
+table
+{
+color:white;
+font-family:verdana;
+font-size:15px;
+font-weight:bold;
+}
+body
+{
+background-color:black;
+}
+div.reg
+{
+padding:50px;
+border-radius:30px;
+background-color:black;
+color:white;
+width:700px;
+height:650px;
+margin-left:auto;
+margin-right:auto;
+box-radius:25px;
+}
+div.form
+{
+font-face:verdana;
+font-size:15px;
+border-radius:30px;
+background-color:grey;
+color:white;
+width:1000px;
+height:800px;
+margin-left:auto;
+margin-right:auto;
+box-radius:25px;
+box-shadow:5px 5px 5px white;
+}
+</style>
+<title>Police Registration page</title>
+</head>
+<body>
+<div class="form">
+<div class="reg">
+<center>
+<h2>Police Registration Form</h2>
+<form action="http://localhost/CR/WebContent/polsignup.php" method=post>
+<table>
+<tr>
+<td>Name:</td><td><input type="text" name="name"/></td>
+</tr>
+<!-- <tr>
+<td>Gender:</td><td><input type="radio" name="polgender" value="male">Male <input type="radio" name="polgender" value="female">Female</td>
+</tr>-->
+<tr>
+<td>Date of birth:</td><td><input type="text" name="poldob"></td>
+</tr>
+<tr>
+<td>Identity number:</td><td><input type="text" name="polid"></td>
+</tr>
+<tr>
+<td>
+Username:</td><td><input type="text" name="poluser"></td>
+</td>
+</tr>
+<tr>
+<td>
+Password:</td><td><input type="password" name="polpass">
+</td>
+</tr>
+<tr>
+<td>Station:</td><td><input type="text" name="polstation"></td>
+</tr>
+<tr>
+<td>Position:</td><td><input type="text" name="polposition"></td>
+</tr>
+<tr>
+<td>Phone number:</td><td><input type="text" name="polnumber"></td>
+</tr>
+<tr>
+<td>Address:</td><td><textarea rows="4" cols="30" name="poladdress"></textarea></td>
+</tr> 
+<br>
+<tr>
+<td><button type="submit"><img src="submit.png"></button></td><td><button type="reset"><img src="reset.png"></button></td>
+</tr>
+</table>
+</form>
+</center>
+</div>
+</div>
+</body>
+</html>

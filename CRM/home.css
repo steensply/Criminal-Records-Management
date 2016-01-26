@@ -1,0 +1,59 @@
+button
+{
+background-color:black;
+}
+h2
+{
+color:white;
+font-family:verdana;
+}
+td
+{
+	border: 20px solid black;
+	text-align:center;
+	font-family:verdana;
+}
+body
+{
+background-color:black;
+color:white;
+}
+div.menu
+{
+	padding:50px;
+	border-radius:30px;
+	background-color:grey;
+	width:300px;
+	border:5px solid #dddddd;
+}
+div.content
+{
+	padding:50px;
+	border-radius:30px;
+	background-color:grey;
+	width:700px;
+	border:5px solid #dddddd;
+}
+div.menu:hover
+{
+transition:1s;
+border-color:#0033FF;
+}
+div.content:hover
+{
+transition:1s;
+border-color:#0033FF;
+}
+div.innermenu
+{
+background-color:black;
+padding:50px;
+border-radius:30px;
+width:200px;
+}
+div.innercontent
+{
+	background-color:black;
+	padding:50px;
+	border-radius:30px;
+}

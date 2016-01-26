@@ -1,0 +1,136 @@
+<html>
+<script type="text/javascript" language="javascript">
+function DisableBackButton() 
+{
+window.history.forward()
+}
+DisableBackButton();
+window.onload = DisableBackButton;
+window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
+window.onunload = function() { void (0) }
+</script>
+<head>
+<link rel="stylesheet" type="text/css" href="home.css">
+<style>
+h2:hover
+{
+color:#0033FF;
+transition:0.5s;
+}
+</style>
+<!--<style>
+h2
+{
+font-family:verdana;
+font-color:white;
+}
+button
+{
+background-color:black;
+}
+td.1
+{
+border: 4px white;
+text-align:right;
+}
+table
+{
+color:white;
+font-family:verdana;
+font-size:15px;
+font-weight:bold;
+}
+body
+{
+background-color:black;
+}
+div.menu
+{
+padding:50px;
+border-radius:30px;
+background-color:black;
+color:white;
+width:130px;
+height:600px;
+margin-left:20px;
+box-radius:25px;
+}
+div.home
+{
+padding:50px;
+border-radius:30px;
+background-color:black;
+color:white;
+width:1220px;
+height:600px;
+margin-left:25px;
+box-radius:25px;
+}
+div.form
+{
+font-face:verdana;
+font-size:15px;
+border-radius:30px;
+background-color:grey;
+color:white;
+width:1635px;
+height:750px;
+margin-left:20px;
+box-radius:25px;
+box-shadow:5px 5px 5px white;
+}
+</style> -->
+<title>Police Home</title>
+</head>
+<body>
+<center><a href="policehome.html"><h2>Home - Police</h2></a></center>
+<table>
+<tr>
+<td>
+<div class="menu">
+<div class="innermenu">
+<center>
+<table>
+<tr><td class="1">
+<a href="policecheckinfo.html"><img src="checkinfo.png"></a>
+</td></tr>
+<tr><td class="1">
+<a href="policecheckmessages.html"><img src="checkmsgs.png"></a>
+</td></tr>
+<!-- <tr><td class="1">
+<a href="policecheckstatus.html"><img src="checkstatus.png"></a>
+</td></tr>-->
+<tr><td class="1">
+<a href="policedeleteinfo.html"><img src="deleteinfo.png"></a>
+</td></tr>
+<tr><td class="1">
+<a href="policeupdateinfo.html"><img src="updateinfo.png"></a>
+</td></tr>
+<tr><td class="1">
+<a href="addinfo.html"><img src="addinfo.png"></a>
+</td></tr>
+</div>
+</td></tr>
+</table>
+</center>
+</div>
+</td>
+<td>
+<div class="content">
+<div class="innercontent">
+<form action="http:/localhost/CR/WebContent/delete.php" method=post>
+<table>
+<tr><td>ID:</td><td><input type="text" name="del"/></td></tr>
+<tr><td><button type="submit"><img src="http://localhost/CR/CRM/submit.png"></button></td></tr>
+</table>
+</form>
+</div>
+</div>
+</td>
+<td>
+<img src="emblem.png" width="200" height="320" />
+</td>
+</tr>
+</table>
+</body>
+</html>
